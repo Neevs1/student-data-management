@@ -13,9 +13,11 @@ def selectFile():
 
 window = Tk() #creates a window using Kinter
 button = Button(text="Select file",command=selectFile) #button that executes a command on press
+text=Label(window,text="Please select the required Excel file")
+text.pack()
 button.pack() #added button to window
-
-window .mainloop() #added window to loop
+window.geometry("400x400") #set size of window to 400 by 400 px
+window.mainloop() #added window to loop
 
 
 
