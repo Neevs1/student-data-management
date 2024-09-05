@@ -6,16 +6,21 @@ from tkinter import filedialog
 fp=""
 def selectFile():
     global fp
-    filepath = filedialog.askopenfilename()
+    filepath = filedialog.askopenfilename(filetypes=(("Excel files","*.xlsx"),))
     fp=filepath
+    window.destroy()
     
 
-window = Tk()
-button = Button(text="Select file",command=selectFile)
-button.pack()
-window .mainloop()
+window = Tk() #creates a window using Kinter
+button = Button(text="Select file",command=selectFile) #button that executes a command on press
+button.pack() #added button to window
 
-file_path = fp
+window .mainloop() #added window to loop
+
+
+
+
+file_path = fp #file_path is assigned value selected through window
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 score_columns = ['UT-1 (15)', 'UT-2 (15)', 'UT-3 (15)', 'UT-4 (15)', 'UT-5 (15)&6(15)']
