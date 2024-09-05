@@ -4,7 +4,7 @@ This is important as it reduces the workload on teachers <br>
 This project is made using Python and uses NumPy,Pandas libraries <br>
 
 ## Team Members
-Neevan Redkar <br>
+<a href="github.com/Neevs1">Neevan Redkar </a> <br>
 Pranav Ijantkar <br>
 Gayatri Apte <br>
 Harsh Baviskar <br>
