@@ -4,11 +4,11 @@ This is important as it reduces the workload on teachers <br>
 This project is made using Python and uses NumPy,Pandas libraries <br>
 
 ## Team Members
-Neevan Redkar
-Pranav Ijantkar
-Gayatri Apte
-Harsh Baviskar
-Guide - Vedang Kane
-Faculty- Prof. Shrilekha Ghatte (First Year Department)
+Neevan Redkar <br>
+Pranav Ijantkar <br>
+Gayatri Apte <br>
+Harsh Baviskar <br>
+Guide - Vedang Kane<br>
+Faculty- Prof. Shrilekha Ghatte (First Year Department)<br>
 
 
