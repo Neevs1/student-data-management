@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import tkinter as tk
 
-file_path = 'E:/Nasa_Hacker/Python/Project-IT_Pranav_Ijantkar .xlsx'
+file_path = '/.xlsx'
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 score_columns = ['UT-1 (15)', 'UT-2 (15)', 'UT-3 (15)', 'UT-4 (15)', 'UT-5 (15)&6(15)']
