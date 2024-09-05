@@ -1,8 +1,21 @@
 import pandas as pd
 import numpy as np
-import tkinter as tk
+from tkinter import *
+from tkinter import filedialog
 
-file_path = '/.xlsx'
+fp=""
+def selectFile():
+    global fp
+    filepath = filedialog.askopenfilename()
+    fp=filepath
+    
+
+window = Tk()
+button = Button(text="Select file",command=selectFile)
+button.pack()
+window .mainloop()
+
+file_path = fp
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 score_columns = ['UT-1 (15)', 'UT-2 (15)', 'UT-3 (15)', 'UT-4 (15)', 'UT-5 (15)&6(15)']
