@@ -8,6 +8,7 @@ def selectFile():
     global fp
     filepath = filedialog.askopenfilename(filetypes=(("Excel files","*.xlsx"),))
     fp=filepath
+    print(filepath)
     window.destroy()
     
 
@@ -64,8 +65,10 @@ def categorize_marks(total_score):
 
 df['Total_Score'] = df[score_columns].sum(axis=1, min_count=1)  
 df['Category'] = df['Total_Score'].apply(categorize_marks)
-
+num = fp.rindex('/')
+fp=fp[:num+1]
+print(fp)
 for branch_name, group in branches:
-    output_file = f'students_{branch_name.replace("/", "_")}.xlsx'  
+    output_file = f'{fp}students_{branch_name.replace("/", "_")}.xlsx'  
     group.to_excel(output_file, index=False)
     print(f'Saved {output_file}')
