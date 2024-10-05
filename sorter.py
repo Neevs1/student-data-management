@@ -14,13 +14,14 @@ def selectFile():
     
 
 window = Tk() #creates a window using Kinter
-window.title = "Sort according to Branch" #title of window
+window.title ("Sort according to Branch") #title of window
+window.configure(background="white") #background color of window
 button = Button(text="Select file",command=selectFile) #button that executes a command on press
-text=Label(window,text="Please select the required Excel file")
-window.title.pack() #added title to window
-text.pack() #aaded text to window
+heading = Label(window,text="PVG'S COET First Year Department",font=("Arial", 15),bg="white") #heading of window
+instructionText=Label(window,text="Please select the required Excel file",font=("Arial", 10),bg="white") #text to be displayed on window
+heading.pack() #added heading to window
+instructionText.pack() #added text to window
 button.pack() #added button to window
-
 window.geometry("400x400") #set size of window to 400 by 400 px
 window.mainloop() #added window to loop
 
@@ -28,9 +29,9 @@ window.mainloop() #added window to loop
 
 
 file_path = fp #file_path is assigned value selected through window
-if not file_path:
+if not file_path: #if no file is selected, error message is displayed
     messagebox.showerror('Error', 'No file selected')
-    exit()
+    exit() #exits the program if no file selected
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 score_columns = ['UT-1 (15)', 'UT-2 (15)', 'UT-3 (15)', 'UT-4 (15)', 'UT-5 (15)&6(15)']
