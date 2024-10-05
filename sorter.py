@@ -17,9 +17,11 @@ window = Tk() #creates a window using Kinter
 window.title ("Sort according to Branch") #title of window
 window.configure(background="white") #background color of window
 button = Button(text="Select file",command=selectFile) #button that executes a command on press
-heading = Label(window,text="PVG'S COET First Year Department",font=("Arial", 15),bg="white") #heading of window
+heading = Label(window,text="PVG'S COET First Year Department",font=("Arial", 15),bg="#063970",fg="white") #heading of window
+titleText=Label(window,text="Sort according to Branch",font=("Arial", 13),bg="white") #title of window
 instructionText=Label(window,text="Please select the required Excel file",font=("Arial", 10),bg="white") #text to be displayed on window
 heading.pack() #added heading to window
+titleText.pack() #added title to window
 instructionText.pack() #added text to window
 button.pack() #added button to window
 window.geometry("400x400") #set size of window to 400 by 400 px
