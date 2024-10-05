@@ -17,7 +17,7 @@ window = Tk() #creates a window using Kinter
 window.title = "Sort according to Branch" #title of window
 button = Button(text="Select file",command=selectFile) #button that executes a command on press
 text=Label(window,text="Please select the required Excel file")
-title.pack() #added title to window
+window.title.pack() #added title to window
 text.pack() #aaded text to window
 button.pack() #added button to window
 
