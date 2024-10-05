@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from tkinter import *
 from tkinter import filedialog
+from tkinter import messagebox
 
 fp=""
 def selectFile():
@@ -13,6 +14,7 @@ def selectFile():
     
 
 window = Tk() #creates a window using Kinter
+window.title = "Sort according to Branch" #title of window
 button = Button(text="Select file",command=selectFile) #button that executes a command on press
 text=Label(window,text="Please select the required Excel file")
 text.pack()
@@ -24,6 +26,9 @@ window.mainloop() #added window to loop
 
 
 file_path = fp #file_path is assigned value selected through window
+if not file_path:
+    messagebox.showerror('Error', 'No file selected')
+    exit()
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 score_columns = ['UT-1 (15)', 'UT-2 (15)', 'UT-3 (15)', 'UT-4 (15)', 'UT-5 (15)&6(15)']
