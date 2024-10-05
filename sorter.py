@@ -76,4 +76,5 @@ fp=fp[:num+1]
 for branch_name, group in branches:
     output_file = f'{fp}students_{branch_name.replace("/", "_")}.xlsx'  
     group.to_excel(output_file, index=False)
-    print(f'Saved {output_file}')
+    #print(f'Saved {output_file}')
+    messagebox.showinfo('Success', f'Saved {output_file}')
