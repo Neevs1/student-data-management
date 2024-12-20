@@ -73,10 +73,21 @@ def categorize_marks(total_score):
         return 'Fail'
     return 'Absent'
 
+def failList(): #adds emails of failing students to a text file
+    file_path = fp+"FailList.txt" #file path of text file
+    f = open(file_path,"x")
+    
+    for index, row in df.iterrows(): #iterates through rows of dataframe
+        if row['Category'] == 'Fail':
+            f.write(f"{row['CRN']}"+"@pvgcoet.ac.in\n") #if student has failed, their email is added to text file
+    f.close()
+
 df['Total_Score'] = df[score_columns].sum(axis=1, min_count=1)  
 df['Category'] = df['Total_Score'].apply(categorize_marks)
 num = fp.rindex('/')
 fp=fp[:num+1]
+failList()
+
 
 for branch_name, group in branches:
     output_file = f'{fp}students_{branch_name.replace("/", "_")}.xlsx'  
